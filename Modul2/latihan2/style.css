@@ -1,0 +1,31 @@
+body {
+  background-color: lightskyblue;
+}
+
+.formContent {
+  margin: auto;
+  padding-top: 20px;
+  margin-top: 100px;
+  height: 400px;
+  width: 30%;
+  background-color: white;
+}
+table {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+td input {
+  width: 165%;
+  height: 30px;
+}
+
+textarea {
+  width: 165%;
+}
+
+#buttonDaftar {
+  background-color: lightskyblue;
+  border: none;
+  height: 40px;
+  color: white;
+}

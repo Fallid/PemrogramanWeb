@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <div class="formContent">
+      <table>
+        <tr>
+          <td><label for="nameInput">Nama Lengkap:</label></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="nameInput" name="nameInput" /></td>
+        </tr>
+        <tr>
+          <td><label for="emailInput">Email:</label></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="emailInput" name="emailInput" /></td>
+        </tr>
+        <tr>
+          <td><label for="alamatInput">Alamat:</label></td>
+        </tr>
+        <tr>
+          <td>
+            <textarea
+              name="alamatInput"
+              id="alamatInput"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button type="button" id="buttonDaftar" onclick="formsValidation()">
+              Daftar
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

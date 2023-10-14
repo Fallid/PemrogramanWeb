@@ -25,6 +25,7 @@ This repository contains the source code of the Web Development project using HT
 ### Prerequisites
 
 - HTML 5
+- Bootstrap 5.3.2
 - CSS 3
 - IDE (VSCode, etc.)
 

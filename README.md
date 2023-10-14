@@ -39,8 +39,9 @@ This repository contains the source code of the Web Development project using HT
 
 The project is structured as follows:
 
-- [`codelab` contains codelab.](https://github.com/rizkyhaksono/pemrograman-web/tree/main/codelab)
-- [`demo` contains demo.](https://github.com/rizkyhaksono/pemrograman-web/tree/main/demo)
+- [`Assets` contains assets for project](https://github.com/Fallid/PemrogramanWeb/tree/main/Assets)
+- [`CodeLab` contains codelab.](https://github.com/Fallid/PemrogramanWeb/tree/main/CodeLab)
+- [`Demo` contains demo.](https://github.com/Fallid/PemrogramanWeb/tree/main/Demo)
 
 ---
 
@@ -64,7 +65,7 @@ Please read the [Contributing Guidelines]() before contributing to this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/rizkyhaksono/pemrograman-web/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Fallid/PemrogramanWeb/blob/main/LICENSE) file for details.
 
 ---
 
@@ -72,10 +73,4 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 [⬆ back to top](#table-of-contents)
 
-[//]: # "This README was generated with ❤️ by rizkyhaksono"# PemrogramanWeb
-Berisikan Modul dan Latihan
-
-System yang digunakan
-
-- HTML
-- CSS
+[//]: # "This README was generated with ❤️ by fallid"# PemrogramanWeb

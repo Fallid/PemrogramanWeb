@@ -43,6 +43,7 @@ The project is structured as follows:
 - [`Assets` contains assets for project](https://github.com/Fallid/PemrogramanWeb/tree/main/Assets)
 - [`CodeLab` contains codelab.](https://github.com/Fallid/PemrogramanWeb/tree/main/CodeLab)
 - [`Demo` contains demo.](https://github.com/Fallid/PemrogramanWeb/tree/main/Demo)
+- [`Modules` contains module.](https://github.com/Fallid/PemrogramanWeb/tree/main/Modules)
 
 ---
 
@@ -74,4 +75,4 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 [⬆ back to top](#table-of-contents)
 
-[//]: # "This README was generated with ❤️ by fallid"# PemrogramanWeb
+[//]: # "This README was generated with ❤️ by Fallid"# PemrogramanWeb

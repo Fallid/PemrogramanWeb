@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List App</title>
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <div class="container">
+      <table>
+        <tr>
+          <td>
+            <div class="containerAdd">
+              <div class="headerAdd">
+                <p>Add Activity</p>
+              </div>
+              <div class="content">
+                <table>
+                  <tr>
+                    <td>
+                      <label for="AddActivity">Activity</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        type="text"
+                        id="AddActivity"
+                        name="AddActivity"
+                        placeholder="Tambahkan Activity"
+                      />
+                    </td>
+                    <td>
+                      <button id="addButton">Add</button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="containerAdd">
+              <div class="headerList">
+                <p>List Activity</p>
+              </div>
+              <div class="content">
+                <div id="task"></div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

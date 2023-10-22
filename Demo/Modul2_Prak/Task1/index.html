@@ -1,59 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script src="script.js"></script>
-    <div class="container">
-      <div class="calculator">
-        <form>
-          <div class="display">
-            <input type="text" name="display" />
-          </div>
-          <div>
-            <input type="button" value="CE" onclick="display.value = ''" />
-            <input
-              type="button"
-              value="C"
-              onclick="display.value = display.value.toString().slice(0,-1)"
-            />
-            <input type="button" value="." onclick="display.value += '.'" />
-            <input type="button" value="/" onclick="display.value += '/'" />
-          </div>
-          <div>
-            <input type="button" value="7" onclick="display.value += '7'" />
-            <input type="button" value="8" onclick="display.value += '8'" />
-            <input type="button" value="9" onclick="display.value += '9'" />
-            <input type="button" value="X" onclick="display.value += 'X'" />
-          </div>
-          <div>
-            <input type="button" value="4" onclick="display.value += '4'" />
-            <input type="button" value="5" onclick="display.value += '5'" />
-            <input type="button" value="6" onclick="display.value += '6'" />
-            <input type="button" value="-" onclick="display.value += '-'" />
-          </div>
-          <div>
-            <input type="button" value="1" onclick="display.value += '1'" />
-            <input type="button" value="2" onclick="display.value += '2'" />
-            <input type="button" value="3" onclick="display.value += '3'" />
-            <input type="button" value="+" onclick="display.value += '+'" />
-          </div>
-          <div>
-            <input type="button" value="00" onclick="display.value = '00'" />
-            <input type="button" value="0" onclick="display.value = '0'" />
-            <input
-              type="button"
-              value="="
-              onclick="display.value = eval(display.value)"
-              class="equals"
-            />
-          </div>
-        </form>
+    <section>
+      <div class="container col-7">
+        <div class="row main-row">
+          <form name="calculate">
+            <div class="col calculator-col">
+              <div class="calculator-body">
+                <div class="row calculator-row">
+                  <textarea
+                    class="col text-result white result"
+                    name="result"
+                  ></textarea>
+                </div>
+                <div class="row calculator-row">
+                  <div class="col cal-button text blue" value="ac">AC</div>
+                  <div class="col cal-button text blue" value="C">C</div>
+                  <div class="col cal-button text blue" value=".">.</div>
+                </div>
+                <div class="row calculator-row">
+                  <div class="col cal-button text blue" value="/">/</div>
+                  <div class="col cal-button text blue" value="^">^</div>
+                  <div class="col cal-button text blue" value="%">%</div>
+                </div>
+                <div class="row calculator-row">
+                  <div class="col cal-button text white" value="7">7</div>
+                  <div class="col cal-button text white" value="8">8</div>
+                  <div class="col cal-button text white" value="9">9</div>
+                  <div class="col cal-button text blue" value="*">x</div>
+                </div>
+                <div class="row calculator-row">
+                  <div class="col cal-button text white" value="4">4</div>
+                  <div class="col cal-button text white" value="5">5</div>
+                  <div class="col cal-button text white" value="6">6</div>
+                  <div class="col cal-button text blue" value="-">-</div>
+                </div>
+                <div class="row calculator-row">
+                  <div class="col cal-button text white" value="1">1</div>
+                  <div class="col cal-button text white" value="2">2</div>
+                  <div class="col cal-button text white" value="3">3</div>
+                  <div class="col cal-button text blue" value="+">+</div>
+                </div>
+                <div class="row calculator-row">
+                  <div class="col-1 cal-button text white" value="00">00</div>
+                  <div class="col-1 cal-button text white" value="0">0</div>
+                  <div class="col cal-button text blue" value="=">=</div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
   </body>
 </html>

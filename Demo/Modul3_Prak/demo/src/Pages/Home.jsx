@@ -2,13 +2,13 @@ import { Fragment } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import Hero from "../Components/HeroHome";
+import HeroHome from "../Components/HeroHome";
 
 const Home = () => {
   return (
     <Fragment>
       <Navbar />
-      <Hero />
+      <HeroHome />
       {/* <main className="my-5 py-5">
         <h1>Home Page</h1>
       </main> */}

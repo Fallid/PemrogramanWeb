@@ -1,5 +1,6 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./HeroHome.css";
-const Hero = () => {
+const HeroHome = () => {
   return (
     <div className="container-fluid hero-background">
       <div className="col-md-6 d-flex h-100 justify-content-center align-items-center">
@@ -11,4 +12,4 @@ const Hero = () => {
     </div>
   );
 };
-export default Hero;
+export default HeroHome;

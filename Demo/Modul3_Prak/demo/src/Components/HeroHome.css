@@ -1,0 +1,11 @@
+.hero-background {
+  background-image: url("../Assets/hero.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+.title {
+  font-size: 50px;
+}
+.subtitle {
+  font-size: 30px;
+}

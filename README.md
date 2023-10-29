@@ -27,6 +27,7 @@ This repository contains the source code of the Web Development project using HT
 - HTML 5
 - Bootstrap 5.3.2
 - CSS 3
+- React 18.2.0
 - IDE (VSCode, etc.)
 
 ### Installing

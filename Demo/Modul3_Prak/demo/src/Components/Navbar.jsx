@@ -5,7 +5,7 @@ const Navbar = () => {
     <header>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             <img className="w-75" src={ilab} alt="" />
           </a>
           <button
@@ -24,13 +24,13 @@ const Navbar = () => {
             id="navbarNavAltMarkup"
           >
             <div className="navbar-nav">
-              <a className="nav-link active" href="#">
+              <a className="nav-link active" href="/">
                 HOME
               </a>
-              <a className="nav-link active" href="#">
+              <a className="nav-link active" href="/about">
                 ABOUT US
               </a>
-              <a className="nav-link active" href="#">
+              <a className="nav-link active" href="/">
                 CONTACT
               </a>
             </div>

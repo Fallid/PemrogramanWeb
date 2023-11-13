@@ -1,5 +1,7 @@
 {
     "conventionalCommits.scopes": [
-        "Modules"
+        "Modules",
+        "setting-json",
+        "CodeLab"
     ]
 }

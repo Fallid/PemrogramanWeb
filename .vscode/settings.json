@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "Modules",
         "setting-json",
-        "CodeLab"
+        "CodeLab",
+        "Demo"
     ]
 }

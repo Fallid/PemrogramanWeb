@@ -52,12 +52,9 @@ class ProductCategoryController extends Controller
     public function show(string $id)
     {
         try {
-            $queryData = ProductCategory::select("products.name AS name", "description", "manufacturers.name AS manufacturer", "types.name AS type", "base_price", "sell_price", "stock")
-            ->join("manufacturers", "manufacturers.id", "=", "products.manufacturer_id")
-            ->join("types", "types.id", "=", "products.type_id")
-            ->where("products.id", "=", $id)
-            ->first();
+            $queryData = ProductCategory::findOrFail($id);
             $formattedDatas = new ProductCategoryResource($queryData);
+
             return response()->json([
                 "message" => "success",
                 "data" => $formattedDatas

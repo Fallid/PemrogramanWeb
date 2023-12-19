@@ -7,16 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Students extends Model
 {
-    // use HasFactory;
+    use HasFactory;
 
-    // public function course()
-    // {
-    //     return $this->hasMany(Courses::class, 'courses_id', 'id');
-    // }
+    protected $guarded = [];
+    public function course()
+    {
+        return $this->belongsTo(Courses::class, "courses_id",  "id");
+    }
     protected $fillable = [
-        // "name_course",
-        // "sks",
-        // "curriculum_semester"
         "courses_id",
         "name_students",
         "nim",

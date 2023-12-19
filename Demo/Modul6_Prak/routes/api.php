@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -15,10 +17,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+Route::post("/register", [AuthController::class, "store"]);
+Route::post("/login", [AuthController::class, "show"]);
+
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
+});
 
 Route::prefix("v1")->group(function () {
-    Route::apiResource("product-category",StudentController::class);
+    Route::apiResource("students", StudentController::class);
+});
+
+Route::prefix("v2")->group(function () {
+    Route::apiResource("courses", CourseController::class);
 });

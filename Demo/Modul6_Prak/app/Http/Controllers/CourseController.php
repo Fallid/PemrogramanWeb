@@ -2,16 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreStudentRequest;
-use App\Http\Requests\UpdateStudentRequest;
-use App\Http\Resources\StudentCollection;
-use App\Http\Resources\StudentResource;
-use App\Models\Students;
+use App\Http\Requests\StoreCourseRequest;
+use App\Http\Requests\UpdateCourseRequest;
+use App\Http\Resources\CourseCollection;
+use App\Http\Resources\CourseResource;
+use App\Models\Courses;
 use Illuminate\Http\Request;
 use Exception;
 
-
-class StudentController extends Controller
+class CourseController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,41 +18,31 @@ class StudentController extends Controller
     public function index()
     {
         try {
-            $queryData = Students::select(
-                "students.id",
-                "courses_id",
-                "name_students",
-                "nim",
-                "semester",
-                "courses.name_course",
-                "courses.sks",
-                "courses.curriculum_semester AS curriculum"
-            )
-                ->join("courses", "courses.id", "=", "students.courses_id")->get();
-            $formattedDatas = new StudentCollection($queryData);
+            $queryData = Courses::all();
+            $formattedDatas = new CourseCollection($queryData);
             return response()->json([
-                "message" => "success",
-                "data" => $formattedDatas
+                "message"=> "success",
+                "data"=> $formattedDatas
             ], 200);
-        } catch (Exception $e) {
-            return response()->json($e->getMessage(), 400);
+        }catch (Exception $e){
+            return response()->json($e->getMessage(),400);
         }
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreStudentRequest $request)
+    public function store(StoreCourseRequest $request)
     {
         $validatedRequest = $request->validated();
-        try {
-            $queryData = Students::create($validatedRequest);
-            $formattedDatas = new StudentResource($queryData);
+        try{
+            $queryData = Courses::create($validatedRequest);
+            $formattedDatas = new CourseResource($queryData);
             return response()->json([
                 "message" => "success",
                 "data" => $formattedDatas
             ], 200);
-        } catch (Exception $e) {
+        }catch(Exception $e){
             return response()->json($e->getMessage(), 400);
         }
     }
@@ -64,8 +53,8 @@ class StudentController extends Controller
     public function show(string $id)
     {
         try {
-            $queryData = Students::findOrFail($id);
-            $formattedDatas = new StudentResource($queryData);
+            $queryData = Courses::findOrFail($id);
+            $formattedDatas = new CourseResource($queryData);
 
             return response()->json([
                 "message" => "success",
@@ -79,14 +68,14 @@ class StudentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateStudentRequest $request, string $id)
+    public function update(UpdateCourseRequest $request, string $id)
     {
         $validatedRequest = $request->validated();
         try {
-            $queryData = Students::findOrFail($id);
+            $queryData = Courses::findOrFail($id);
             $queryData->update($validatedRequest);
             $queryData->save();
-            $formattedDatas = new StudentResource($queryData);
+            $formattedDatas = new CourseResource($queryData);
             return response()->json([
                 "message" => "success",
                 "data" => $formattedDatas
@@ -102,9 +91,9 @@ class StudentController extends Controller
     public function destroy(string $id)
     {
         try {
-            $queryData = Students::findOrFail($id);
+            $queryData = Courses::findOrFail($id);
             $queryData->delete();
-            $formattedDatas = new StudentResource($queryData);
+            $formattedDatas = new CourseResource($queryData);
             return response()->json([
                 "message" => "success",
                 "data" => $formattedDatas
